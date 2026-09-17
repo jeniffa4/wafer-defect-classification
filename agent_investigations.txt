@@ -1,0 +1,83 @@
+
+==============================================================
+TRUE LABEL: Center
+==============================================================
+VERDICT: CONFIRMED
+REASONING: Both models independently predict Center with confidence 0.873 and 0.981.
+Tools called: 3
+  -> classify: {'rf_prediction': 'Center', 'rf_confidence': 0.873, 'cnn_prediction': 'Center', 'cnn_confidence': 0.981, 'models_agree': True}
+  -> spatial_distribution: {'center_density': np.float64(0.1243), 'middle_density': np.float64(0.1697), 'edge_density': np.float64(0.3077), 'mean_radius': np.float64(0.5162), 'radius_std': np.float64(0.2077)}
+  -> cluster_analysis: {'n_clusters': 53, 'largest_cluster_frac': np.float64(0.1163), 'elongation': np.float64(0.2857), 'fill_ratio': np.float64(0.625)}
+
+==============================================================
+TRUE LABEL: Donut
+==============================================================
+VERDICT: CONFIRMED
+REASONING: Both models independently predict Donut with confidence 0.937 and 0.999.
+Tools called: 3
+  -> classify: {'rf_prediction': 'Donut', 'rf_confidence': 0.937, 'cnn_prediction': 'Donut', 'cnn_confidence': 0.999, 'models_agree': True}
+  -> spatial_distribution: {'center_density': np.float64(0.5839), 'middle_density': np.float64(0.2909), 'edge_density': np.float64(0.1548), 'mean_radius': np.float64(0.4036), 'radius_std': np.float64(0.1417)}
+  -> cluster_analysis: {'n_clusters': 80, 'largest_cluster_frac': np.float64(0.7094), 'elongation': np.float64(0.7822), 'fill_ratio': np.float64(0.4581)}
+
+==============================================================
+TRUE LABEL: Edge-Loc
+==============================================================
+VERDICT: CONFIRMED
+REASONING: Both models independently predict Edge-Loc with confidence 0.97 and 0.999.
+Tools called: 3
+  -> classify: {'rf_prediction': 'Edge-Loc', 'rf_confidence': 0.97, 'cnn_prediction': 'Edge-Loc', 'cnn_confidence': 0.999, 'models_agree': True}
+  -> spatial_distribution: {'center_density': np.float64(0.0936), 'middle_density': np.float64(0.155), 'edge_density': np.float64(0.288), 'mean_radius': np.float64(0.5374), 'radius_std': np.float64(0.189)}
+  -> cluster_analysis: {'n_clusters': 154, 'largest_cluster_frac': np.float64(0.4), 'elongation': np.float64(0.943), 'fill_ratio': np.float64(0.5364)}
+
+==============================================================
+TRUE LABEL: Edge-Ring
+==============================================================
+VERDICT: DISAGREEMENT - manual review required
+REASONING: Models split between Edge-Ring and Edge-Loc. The rarer of the two (Edge-Loc, 5189 training examples) carries higher uncertainty.
+Tools called: 6
+  -> classify: {'rf_prediction': 'Edge-Ring', 'rf_confidence': 0.647, 'cnn_prediction': 'Edge-Loc', 'cnn_confidence': 0.885, 'models_agree': False}
+  -> cnn_alternatives: {'top_3': [{'class': 'Edge-Loc', 'prob': 0.885}, {'class': 'Edge-Ring', 'prob': 0.115}, {'class': 'Loc', 'prob': 0.0}]}
+  -> spatial_distribution: {'center_density': np.float64(0.1186), 'middle_density': np.float64(0.2424), 'edge_density': np.float64(0.4615), 'mean_radius': np.float64(0.554), 'radius_std': np.float64(0.1751)}
+  -> cluster_analysis: {'n_clusters': 42, 'largest_cluster_frac': np.float64(0.1947), 'elongation': np.float64(0.9331), 'fill_ratio': np.float64(0.7333)}
+  -> class_prior: {'pattern': 'Edge-Ring', 'training_examples': 9680, 'share_of_defects': 0.3793}
+  -> class_prior: {'pattern': 'Edge-Loc', 'training_examples': 5189, 'share_of_defects': 0.2033}
+
+==============================================================
+TRUE LABEL: Loc
+==============================================================
+VERDICT: LOW CONFIDENCE - recommend review
+REASONING: Both models predict Loc, but confidence is below threshold. Nearest alternative is Edge-Loc at 0.356.
+Tools called: 3
+  -> classify: {'rf_prediction': 'Loc', 'rf_confidence': 0.707, 'cnn_prediction': 'Loc', 'cnn_confidence': 0.636, 'models_agree': True}
+  -> cnn_alternatives: {'top_3': [{'class': 'Loc', 'prob': 0.636}, {'class': 'Edge-Loc', 'prob': 0.356}, {'class': 'Scratch', 'prob': 0.008}]}
+  -> spatial_distribution: {'center_density': np.float64(0.1299), 'middle_density': np.float64(0.2424), 'edge_density': np.float64(0.3846), 'mean_radius': np.float64(0.5245), 'radius_std': np.float64(0.1692)}
+
+==============================================================
+TRUE LABEL: Near-full
+==============================================================
+VERDICT: CONFIRMED
+REASONING: Both models independently predict Near-full with confidence 1.0 and 1.0.
+Tools called: 3
+  -> classify: {'rf_prediction': 'Near-full', 'rf_confidence': 1.0, 'cnn_prediction': 'Near-full', 'cnn_confidence': 1.0, 'models_agree': True}
+  -> spatial_distribution: {'center_density': np.float64(1.0), 'middle_density': np.float64(1.0), 'edge_density': np.float64(1.0), 'mean_radius': np.float64(0.4733), 'radius_std': np.float64(0.1685)}
+  -> cluster_analysis: {'n_clusters': 1, 'largest_cluster_frac': np.float64(1.0), 'elongation': np.float64(0.0328), 'fill_ratio': np.float64(0.7885)}
+
+==============================================================
+TRUE LABEL: Random
+==============================================================
+VERDICT: CONFIRMED
+REASONING: Both models independently predict Random with confidence 0.89 and 0.943.
+Tools called: 3
+  -> classify: {'rf_prediction': 'Random', 'rf_confidence': 0.89, 'cnn_prediction': 'Random', 'cnn_confidence': 0.943, 'models_agree': True}
+  -> spatial_distribution: {'center_density': np.float64(0.5424), 'middle_density': np.float64(0.3667), 'edge_density': np.float64(0.5), 'mean_radius': np.float64(0.4488), 'radius_std': np.float64(0.1809)}
+  -> cluster_analysis: {'n_clusters': 38, 'largest_cluster_frac': np.float64(0.3391), 'elongation': np.float64(0.7788), 'fill_ratio': np.float64(0.3467)}
+
+==============================================================
+TRUE LABEL: Scratch
+==============================================================
+VERDICT: CONFIRMED
+REASONING: Both models independently predict Scratch with confidence 0.807 and 0.999.
+Tools called: 3
+  -> classify: {'rf_prediction': 'Scratch', 'rf_confidence': 0.807, 'cnn_prediction': 'Scratch', 'cnn_confidence': 0.999, 'models_agree': True}
+  -> spatial_distribution: {'center_density': np.float64(0.1751), 'middle_density': np.float64(0.1455), 'edge_density': np.float64(0.3077), 'mean_radius': np.float64(0.465), 'radius_std': np.float64(0.209)}
+  -> cluster_analysis: {'n_clusters': 47, 'largest_cluster_frac': np.float64(0.1494), 'elongation': np.float64(0.9785), 'fill_ratio': np.float64(0.2708)}

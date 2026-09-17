@@ -1,0 +1,27 @@
+WM-811K WAFER DEFECT CLASSIFICATION - RESULTS
+
+Dataset: 811,457 total | 172,950 labeled (21.3%) | 25,519 defects
+
+Split: 16,332 train | 4,083 val | 5,104 test
+
+
+RANDOM FOREST (13 engineered features)
+  Accuracy 88.3%   Macro-F1 0.856
+
+CNN (64x64x3 images, ~103k params)
+  Accuracy 88.9%   Macro-F1 0.842
+
+              precision    recall  f1-score   support
+
+      Center      0.908     0.868     0.888       859
+       Donut      0.756     0.811     0.783       111
+    Edge-Loc      0.842     0.907     0.873      1038
+   Edge-Ring      0.981     0.979     0.980      1936
+         Loc      0.751     0.684     0.716       719
+   Near-full      0.707     0.967     0.817        30
+      Random      0.884     0.879     0.881       173
+     Scratch      0.785     0.811     0.798       238
+
+    accuracy                          0.889      5104
+   macro avg      0.827     0.863     0.842      5104
+weighted avg      0.889     0.889     0.888      5104

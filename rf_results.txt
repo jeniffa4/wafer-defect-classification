@@ -1,0 +1,19 @@
+RANDOM FOREST - 13 engineered features
+
+Accuracy: 88.3%
+Macro-F1: 0.856
+
+              precision    recall  f1-score   support
+
+      Center      0.932     0.953     0.942       859
+       Donut      0.794     0.730     0.761       111
+    Edge-Loc      0.769     0.858     0.811      1038
+   Edge-Ring      0.981     0.968     0.975      1936
+         Loc      0.756     0.682     0.717       719
+   Near-full      0.968     1.000     0.984        30
+      Random      0.928     0.896     0.912       173
+     Scratch      0.803     0.702     0.749       238
+
+    accuracy                          0.883      5104
+   macro avg      0.866     0.849     0.856      5104
+weighted avg      0.884     0.883     0.882      5104

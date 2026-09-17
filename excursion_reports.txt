@@ -1,0 +1,176 @@
+
+============================================================
+True label: Center
+============================================================
+
+OBSERVED PATTERN
+  Center. 16.1% of dies failed.
+
+EVIDENCE
+  Regional failure rate: centre 12.4%, edge 30.8%.
+  Mean defect radius 0.516 (0 = centre, 1 = rim).
+  53 clusters; largest holds 11.6% of failures.
+  Elongation 0.286, fill ratio 0.625.
+
+INVESTIGATION AREAS
+  Consider centre-of-wafer conditions: chuck contact, rotation-speed effects, centre gas distribution.
+  This pattern indicates where to look. It does not establish a
+  physical root cause and should be confirmed against tool logs.
+
+CONFIDENCE: high
+  Feature model: Center (87.3%)
+  Image model:   Center (98.1%)
+
+============================================================
+True label: Donut
+============================================================
+
+OBSERVED PATTERN
+  Donut. 37.6% of dies failed.
+
+EVIDENCE
+  Regional failure rate: centre 58.4%, edge 15.5%.
+  Mean defect radius 0.404 (0 = centre, 1 = rim).
+  80 clusters; largest holds 70.9% of failures.
+  Elongation 0.782, fill ratio 0.458.
+
+INVESTIGATION AREAS
+  Consider annular non-uniformity: rotational process symmetry, radial flow or temperature gradients.
+  This pattern indicates where to look. It does not establish a
+  physical root cause and should be confirmed against tool logs.
+
+CONFIDENCE: high
+  Feature model: Donut (93.7%)
+  Image model:   Donut (99.9%)
+
+============================================================
+True label: Edge-Loc
+============================================================
+
+OBSERVED PATTERN
+  Edge-Loc. 14.2% of dies failed.
+
+EVIDENCE
+  Regional failure rate: centre 9.4%, edge 28.8%.
+  Mean defect radius 0.537 (0 = centre, 1 = rim).
+  154 clusters; largest holds 40.0% of failures.
+  Elongation 0.943, fill ratio 0.536.
+
+INVESTIGATION AREAS
+  Consider localized edge conditions: handling contact points, clamp or chuck marks, asymmetric flow at the rim.
+  This pattern indicates where to look. It does not establish a
+  physical root cause and should be confirmed against tool logs.
+
+CONFIDENCE: high
+  Feature model: Edge-Loc (97.0%)
+  Image model:   Edge-Loc (99.9%)
+
+============================================================
+True label: Edge-Ring
+============================================================
+
+OBSERVED PATTERN
+  Edge-Ring or Edge-Loc (disputed). 21.2% of dies failed.
+
+EVIDENCE
+  Regional failure rate: centre 11.9%, edge 46.2%.
+  Mean defect radius 0.554 (0 = centre, 1 = rim).
+  42 clusters; largest holds 19.5% of failures.
+  Elongation 0.933, fill ratio 0.733.
+
+INVESTIGATION AREAS
+  Consider edge-related process uniformity: bevel/edge exclusion, chuck contact at the wafer rim, edge bead removal.
+  This pattern indicates where to look. It does not establish a
+  physical root cause and should be confirmed against tool logs.
+
+CONFIDENCE: low - models disagree, manual review recommended
+  Feature model: Edge-Ring (64.7%)
+  Image model:   Edge-Loc (88.5%)
+
+============================================================
+True label: Loc
+============================================================
+
+OBSERVED PATTERN
+  Loc. 21.2% of dies failed.
+
+EVIDENCE
+  Regional failure rate: centre 13.0%, edge 38.5%.
+  Mean defect radius 0.524 (0 = centre, 1 = rim).
+  62 clusters; largest holds 17.7% of failures.
+  Elongation 0.702, fill ratio 0.476.
+
+INVESTIGATION AREAS
+  Consider a localized point source: particle contamination, a single chamber position, a spot defect on tooling.
+  This pattern indicates where to look. It does not establish a
+  physical root cause and should be confirmed against tool logs.
+
+CONFIDENCE: medium
+  Feature model: Loc (70.7%)
+  Image model:   Loc (63.6%)
+
+============================================================
+True label: Near-full
+============================================================
+
+OBSERVED PATTERN
+  Near-full. 100.0% of dies failed.
+
+EVIDENCE
+  Regional failure rate: centre 100.0%, edge 100.0%.
+  Mean defect radius 0.473 (0 = centre, 1 = rim).
+  1 clusters; largest holds 100.0% of failures.
+  Elongation 0.033, fill ratio 0.788.
+
+INVESTIGATION AREAS
+  Consider a gross process excursion affecting the whole wafer: recipe fault, tool malfunction, or misprocessing.
+  This pattern indicates where to look. It does not establish a
+  physical root cause and should be confirmed against tool logs.
+
+CONFIDENCE: high
+  Feature model: Near-full (100.0%)
+  Image model:   Near-full (100.0%)
+
+============================================================
+True label: Random
+============================================================
+
+OBSERVED PATTERN
+  Random. 43.1% of dies failed.
+
+EVIDENCE
+  Regional failure rate: centre 54.2%, edge 50.0%.
+  Mean defect radius 0.449 (0 = centre, 1 = rim).
+  38 clusters; largest holds 33.9% of failures.
+  Elongation 0.779, fill ratio 0.347.
+
+INVESTIGATION AREAS
+  Consider distributed random failure: particle counts, ambient contamination, general process control.
+  This pattern indicates where to look. It does not establish a
+  physical root cause and should be confirmed against tool logs.
+
+CONFIDENCE: high
+  Feature model: Random (89.0%)
+  Image model:   Random (94.3%)
+
+============================================================
+True label: Scratch
+============================================================
+
+OBSERVED PATTERN
+  Scratch. 16.3% of dies failed.
+
+EVIDENCE
+  Regional failure rate: centre 17.5%, edge 30.8%.
+  Mean defect radius 0.465 (0 = centre, 1 = rim).
+  47 clusters; largest holds 14.9% of failures.
+  Elongation 0.979, fill ratio 0.271.
+
+INVESTIGATION AREAS
+  Consider mechanical handling: wafer transfer arms, contact points, carrier or cassette damage.
+  This pattern indicates where to look. It does not establish a
+  physical root cause and should be confirmed against tool logs.
+
+CONFIDENCE: high
+  Feature model: Scratch (80.7%)
+  Image model:   Scratch (99.9%)
